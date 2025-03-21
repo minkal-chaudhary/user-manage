@@ -21,7 +21,6 @@ public class UserServiceImpl {
     @Autowired
     private UserRepository userRepository;
 
-    ArrayList<User> users=new ArrayList<>();
 
     public User createUser(User user) {
         return userRepository.save(user);
