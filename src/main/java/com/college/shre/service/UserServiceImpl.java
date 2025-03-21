@@ -23,6 +23,7 @@ public class UserServiceImpl {
 
 
     public User createUser(User user) {
+
         return userRepository.save(user);
     }
 
@@ -37,6 +38,12 @@ public class UserServiceImpl {
     }
 
     public List<User> getUser() {
+        try{
+        int i=1/0;
+        }catch(Exception e)
+        {
+            throw new RuntimeException();
+        }
         return userRepository.findAll();
     }
 }

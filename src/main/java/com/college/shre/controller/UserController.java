@@ -39,6 +39,7 @@ public class UserController {
     @GetMapping(value = "/user/details")
     public List<User> getUser()
     {
+        
         return userServiceImpl.getUser();
     }
 

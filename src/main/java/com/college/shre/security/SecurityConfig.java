@@ -27,7 +27,7 @@ public class SecurityConfig {
         http
             .csrf().disable()
             .authorizeHttpRequests((authorize) -> authorize
-                .requestMatchers("/user/details", "/user/create").authenticated() // Require authentication for these endpoints
+                .requestMatchers("/test").authenticated() // Require authentication for these endpoints
                 .anyRequest().permitAll() // Allow all other requests
             )
             .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Ensure stateless session management
