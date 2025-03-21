@@ -27,13 +27,13 @@ public class UserController {
     @PutMapping(value = "/user/update")
     public String updateUser()
     {
-        return userServiceImpl.updateUser();
+        return userServiceImpl.updateUser(null);
     }
 
     @DeleteMapping(value = "/user/delete")
     public String deleteUser()
     {
-        return userServiceImpl.deleteUser();
+        return userServiceImpl.deleteUser(12);
     }
 
     @GetMapping(value = "/user/details")
