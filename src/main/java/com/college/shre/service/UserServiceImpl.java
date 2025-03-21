@@ -38,12 +38,7 @@ public class UserServiceImpl {
     }
 
     public List<User> getUser() {
-        try{
-        int i=1/0;
-        }catch(Exception e)
-        {
-            throw new RuntimeException();
-        }
+       
         return userRepository.findAll();
     }
 }
