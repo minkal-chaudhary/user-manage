@@ -41,4 +41,14 @@ public class UserServiceImpl {
        
         return userRepository.findAll();
     }
+
+    public User findByName(String name)
+    {
+        return userRepository.findByName(name);
+    }
+    public User findByNameAndEmail(String name, String email)
+    {
+
+        return userRepository.findByNameAndEmail(name, email);
+    }
 }
