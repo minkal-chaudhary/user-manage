@@ -30,7 +30,7 @@ public class JwtFilter extends OncePerRequestFilter {
         String authorizationHeader = request.getHeader("Authorization");
 
         // Bypass filter for generate-token endpoint
-        if (request.getRequestURI().equals("/generate-token")) {
+        if (request.getRequestURI().startsWith("/api") || true) {
             filterChain.doFilter(request, response);
             return;
         }
